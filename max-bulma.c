@@ -3,19 +3,18 @@
 
 int xbulma(int adet, int *diBasAd) //max değerini bulup döndüren fonksiyon.
 {
-    int* basit = diBasAd;
-    int frmax;
-    frmax = *basit;
-    for(int i = 0; i < adet; i++)
+    int* basit = diBasAd; // ismi basitleştirdik
+    int frmax; // dizinin sürekli referans alacağı nokta.
+    frmax = *basit; // ilk karşılaşacağı yer ilk eleman olacağı için ilk onu referans alırız.
+    for(int i = 0; i < adet; i++)// referans ile kendisinden bir sonraki elemanı karşılaştıran if bloğu.
     {
 
         if (frmax < *(basit + i))
         {
             frmax = *(basit + i);
-            continue;
         } 
     }
-    return frmax;   
+    return frmax; // maks değeri döndürür.  
 }
 
 
